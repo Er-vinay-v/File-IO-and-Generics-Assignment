@@ -1,0 +1,63 @@
+﻿Assignment Solutions
+1.What is input and output stream in java?
+Ans : It is a predefined function which is used to perform operations like read and write operations with the help of these functions.InputStream mins read the data from the file and output stream mins perform write operation in the file.
+
+
+2.What is the method of outputStream?
+Ans: Some important methods of outputStream like→
+Write() → write the specified byte to the output stream.
+Write(byte [] array) → writes the bytes from the specified array to the output stream.
+flush() →forces to write all data present in the output stream to the destination.
+close() →closes the output stream.
+
+
+3.What is serialisation in java?
+Ans : Serialization is the process of converting an object into a stream of bytes to transfer it over a network or to store it in a file or database. In Java, serialisation is done by implementing the Serializable interface.
+
+
+4.What is a serializable interface in java?
+Ans : The Serializable interface in Java is a marker interface that has no methods. It is used to mark classes that can be serialised, meaning their object instances can be converted into a stream of bytes.
+
+
+5.What is deserialization in java?
+Ans : Deserialization is the process of converting a stream of bytes back into an object instance. This is done after an object has been serialised.
+
+
+6.How to achieve serialisation in java?
+ Ans: Serialization is achieved in Java by implementing the Serializable interface. When an object is serialised, its state is converted into a stream of bytes, which can then be transferred over a network or stored in a file or database.
+
+
+7.How is deserialization achieved in java?
+Ans : Deserialization is achieved in Java by reading a stream of bytes and using them to recreate the original object instance. This is done by calling the readObject() method of an ObjectInputStream instance.
+8.How can you avoid certain member variables from getting class serialised?
+Ans : Mark member variables as static or transient, and those member variables will no more be a part of Serialization.
+
+
+9.What classes are  available in the java IO file classes API?
+Ans : The following classes are available in the Java IO API and are important to work with files in Java.
+
+
+File
+RandomAccessFile
+FileInputStream
+FileReader
+FileOutputStream
+FileWriter
+
+
+10.What is Difference between Externalizable and Serialization interfaces?
+Ans : There are many differences between Externalizable and Serialization shown below table →
+
+
+Externalizable
+	Serialisation 
+	An externalizable interface used to implement Externalization
+	A serializable interface is used to implement serialisation.
+
+
+	The externalizable interface is not a marker interface and thus it defines two methods writeExternal() and readExternal().
+	Serializable is a marker interface i.e. it does not contain any method.
+	Serialisation using an externalizable interface has better performance.
+	Serialisation using a serializable interface has bad performance.
+	Based on our requirements we can save either the total object or part of the object.
+	Using a serializable interface we save the total object to a file, and it is not possible to save part of the object.
